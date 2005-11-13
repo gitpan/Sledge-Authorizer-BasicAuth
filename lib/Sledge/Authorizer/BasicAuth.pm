@@ -3,7 +3,7 @@ use strict;
 use warnings;
 use base qw(Sledge::Authorizer Class::Data::Inheritable);
 use vars qw($VERSION);
-$VERSION = '0.01';
+$VERSION = '0.02';
 use MIME::Base64 qw//;
 
 __PACKAGE__->mk_classdata('error_template');
@@ -40,11 +40,11 @@ __END__
 
 =head1 NAME
 
-Sledge::Authorizer::BasicAuth - Basic Authorization module for Sledge
+Sledge::Authorizer::BasicAuth - Basic Authentication module for Sledge
 
 =head1 SYNOPSIS
 
-  use Your::Authorizer;
+  package Your::Authorizer;
   use base qw(Sledge::Authorizer::BasicAuth);
   use Your::Data::User;
 
@@ -69,7 +69,7 @@ Sledge::Authorizer::BasicAuth - Basic Authorization module for Sledge
 
 =head1 DESCRIPTION
 
-Sledge::Authorizer::BasicAuth is Basic Authorization module for Sledge.
+Sledge::Authorizer::BasicAuth is Basic Authentication module for Sledge.
 
 =head1 AUTHOR
 
@@ -77,6 +77,10 @@ MATSUNO Tokuhiro E<lt>tokuhirom at mobilefactory.jpE<gt>
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.
+
+=head1 THANKS TO
+
+Tatsuhiko Miyagawa.
 
 =head1 SEE ALSO
 
