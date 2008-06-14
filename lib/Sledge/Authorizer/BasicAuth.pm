@@ -2,8 +2,9 @@ package Sledge::Authorizer::BasicAuth;
 use strict;
 use warnings;
 use base qw(Sledge::Authorizer Class::Data::Inheritable);
-use vars qw($VERSION);
-$VERSION = '0.02';
+
+our $VERSION = '0.04';
+
 use MIME::Base64 qw//;
 
 __PACKAGE__->mk_classdata('error_template');
@@ -15,11 +16,12 @@ sub basic_auth {
 
     my $auth_header = $page->r->header_in('Authorization') || '';
     if ($auth_header =~ /^Basic (.+)$/) {
-        return split q{:}, MIME::Base64::decode_base64($1);
-    } else {
-        $self->show_error_page($page);
-        return;
+        my ($user, $pass) = split q{:}, MIME::Base64::decode_base64($1);
+        if (defined $user and defined $pass) {
+            return ($user, $pass);
+        }
     }
+    return $self->show_error_page($page);
 }
 
 sub show_error_page {
