@@ -1,5 +1,9 @@
 Revision history for Perl extension Sledge::Authorizer::BasicAuth
 
+0.05
+
+    - modernized dist pkg
+
 0.04
 
     - use Module::Install

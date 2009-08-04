@@ -2,8 +2,9 @@ package Sledge::Authorizer::BasicAuth;
 use strict;
 use warnings;
 use base qw(Sledge::Authorizer Class::Data::Inheritable);
+use 5.008001;
 
-our $VERSION = '0.04';
+our $VERSION = '0.05';
 
 use MIME::Base64 qw//;
 

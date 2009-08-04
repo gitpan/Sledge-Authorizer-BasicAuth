@@ -3,6 +3,7 @@ use inc::Module::Install;
 all_from 'lib/Sledge/Authorizer/BasicAuth.pm';
 
 requires 'Class::Data::Inheritable' => 0.08;
+requires 'MIME::Base64' => 3.08;
 
 test_requires 'Test::More'        => 0.32;
 test_requires 'Test::Exception'   => 0.21;
