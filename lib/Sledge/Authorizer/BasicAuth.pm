@@ -4,7 +4,7 @@ use warnings;
 use base qw(Sledge::Authorizer Class::Data::Inheritable);
 use 5.008001;
 
-our $VERSION = '0.05';
+our $VERSION = '0.06';
 
 use MIME::Base64 qw//;
 
@@ -76,7 +76,7 @@ Sledge::Authorizer::BasicAuth is Basic Authentication module for Sledge.
 
 =head1 AUTHOR
 
-MATSUNO Tokuhiro E<lt>tokuhirom at mobilefactory.jpE<gt>
+MATSUNO Tokuhiro E<lt>tokuhirom@gmail.comE<gt>
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.

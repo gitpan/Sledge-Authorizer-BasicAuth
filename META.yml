@@ -1,11 +1,29 @@
-# http://module-build.sourceforge.net/META-spec.html
-#XXXXXXX This is a prototype!!!  It will change in the future!!! XXXXX#
-name:         Sledge-Authorizer-BasicAuth
-version:      0.03
-version_from: lib/Sledge/Authorizer/BasicAuth.pm
-installdirs:  site
+---
+abstract: 'Basic Authentication module for Sledge'
+author:
+  - 'MATSUNO Tokuhiro E<lt>tokuhirom@gmail.comE<gt>'
+build_requires:
+  Test::More: 0.98
+configure_requires:
+  Module::Build: 0.38
+dynamic_config: 0
+generated_by: 'Module::Build version 0.4003, CPAN::Meta::Converter version 2.120921'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: Sledge-Authorizer-BasicAuth
+no_index:
+  directory:
+    - t
+    - inc
+provides:
+  Sledge::Authorizer::BasicAuth:
+    file: lib/Sledge/Authorizer/BasicAuth.pm
+    version: 0.06
 requires:
-    Test::More:                    0.32
-
-distribution_type: module
-generated_by: ExtUtils::MakeMaker version 6.17
+  Class::Data::Inheritable: 0.08
+  perl: 5.008001
+resources:
+  license: http://dev.perl.org/licenses/
+version: 0.06
