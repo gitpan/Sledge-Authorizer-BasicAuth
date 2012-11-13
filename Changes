@@ -1,5 +1,9 @@
 Revision history for Perl extension Sledge::Authorizer::BasicAuth
 
+0.07
+
+    - fixed testing deps
+
 0.06
 
     - modernized package with M::B

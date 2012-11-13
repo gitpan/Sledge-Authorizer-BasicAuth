@@ -3,6 +3,7 @@ abstract: 'Basic Authentication module for Sledge'
 author:
   - 'MATSUNO Tokuhiro E<lt>tokuhirom@gmail.comE<gt>'
 build_requires:
+  Test::Exception: 0
   Test::More: 0.98
 configure_requires:
   Module::Build: 0.38
@@ -20,10 +21,10 @@ no_index:
 provides:
   Sledge::Authorizer::BasicAuth:
     file: lib/Sledge/Authorizer/BasicAuth.pm
-    version: 0.06
+    version: 0.07
 requires:
   Class::Data::Inheritable: 0.08
   perl: 5.008001
 resources:
   license: http://dev.perl.org/licenses/
-version: 0.06
+version: 0.07
